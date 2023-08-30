@@ -157,7 +157,7 @@ export default function Medical({ session }) {
       </div>
       <div className="h-screen flex-1 p-7">
         <Header datos={datos} />
-        <div className="relative h-[22%] h-10 mt-5 flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-full h-1/2 z-[-2] mx-auto border border-white bg-white">
+        <div className="relative h-[120px] h-10 mt-5 flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-full h-1/2 z-[-2] mx-auto border border-white bg-white">
           <div className="w-full md:w-1/3 bg-white grid place-items-center">
             <img
               src="/logos/aplicaciones/Logo_Medical.png"
