@@ -2,21 +2,29 @@ import Header from "@/components/Header";
 import { useState } from "react";
 import Link from "next/link";
 import { getSession } from "next-auth/react";
+import { Menu } from "@/data/slider";
 
 export default function Medical({ session }) {
   const [datos, setDatos] = useState(session);
   const [open, setOpen] = useState(true);
-  const Menus = [
+
+    /* Arreglos con el menu general del slider */
+  const menus = Menu;
+
+   const contentCard =[
     {
-        title: "My Bodytech",
-        src: "icon_MyBodytech",
-        gap: true,
-        href: "/bodytech",
-      },
-      { title: "Medical", src: "icon_Medical", href: "medical" },
-      { title: "Operaciones", src: "icon_Operaciones", href: "operaciones" },
-      { title: "Comercial", src: "icon_Comercial", href: "comercial" },
-  ];
+      title:"Unidades",
+      img:"/gif/comercial/unidades.gif",
+      description:"Unidades - Quicksight",
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/dashboards/4cef9414-d260-4a20-80f7-34a755b69b51/views/c69710fa-8bc0-4e00-9419-df72534192ae"
+    },
+    {
+      title:"Ingresos",
+      img:"/gif/comercial/ingresos.gif",
+      description:"Ingresos - Quicksight",
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/da95351b-f2bf-48f9-834c-2dd469eafb34?directory_alias=bodytechteam"
+    }
+  ]
   return (
     <div className="flex">
       <div
@@ -66,7 +74,7 @@ export default function Medical({ session }) {
           <img
             src="/logos/logo_bi4.png"
             className={`cursor-pointer duration-500 w-20 h-20 mt-[-26px] ${
-              open && "rotate-[360deg] "
+              open ? "rotate-[360deg] " : "w-10 h-10 ml-[20px]"
             }`}
           />
           <h1
@@ -107,24 +115,24 @@ export default function Medical({ session }) {
           {" "}
           Aplicaciones{" "}
         </h3>
-        <ul className="pt-6">
-          {Menus.map((Menu, index) => (
-            <Link href={Menu.href}>
+        <ul className="pt-14">
+          {menus.map((menu, index) => (
+            <Link href={menu.href}>
               <li
                 key={index}
                 className={`flex bg-gray-100 hover:bg-gray-200 cursor-pointer rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4 
-              ${Menu.gap ? "mt-9" : "mt-2"} ${
+              ${menu.gap ? "mt-9" : "mt-2"} ${
                   index === 0 && "bg-light-white"
                 } `}
               >
                 <img
                   className="w-6 h-6"
-                  src={`/logos/aplicaciones/iconos/${Menu.src}.png`}
+                  src={`/logos/aplicaciones/iconos/${menu.src}.png`}
                 />
                 <span
                   className={`${!open && "hidden"} origin-left duration-200`}
                 >
-                  {Menu.title}
+                  {menu.title}
                 </span>
               </li>
             </Link>
@@ -177,7 +185,33 @@ export default function Medical({ session }) {
           </div>
         </div>
         {/* seccion de las tarjetas */}
-
+     {/* seccion de las tarjetas */}
+     <div className="grid grid-cols-1 mt-[20px] gap-5 md:grid-cols-2 lg:grid-cols-3 animate-fade-up">
+        {contentCard.map((card, i) => (
+          <div className="group relative cursor-pointer rounded-lg items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+            <div className="h-96 w-full">
+              <img
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                src={card.img}
+                alt={card.title}
+              />
+            </div>
+            
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+            <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+              <h1 className="font-dmserif text-3xl mt-[-50%] font-semibold text-white">{card.title}</h1>
+              <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                {card.description}
+              </p>
+              <Link href={card.href} target="_blank">
+              <button className="hover:bg-gray-200 hover:text-gray-900 rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+               <spam className="hover:opacity-100">Ingresar</spam>
+              </button>
+              </Link>
+            </div>
+          </div>
+             ))};
+        </div>
         <p className="flex justify-end text-gray-500 font-semibold mt-[12px]">
           © Bodytech Corp. Todos los derechos reservados.
         </p>

@@ -2,21 +2,15 @@ import Header from "@/components/Header";
 import { useState } from "react";
 import Link from "next/link";
 import { getSession } from "next-auth/react";
+import { Menu } from "@/data/slider";
 
 export default function MyBodytech({ session }) {
   const [datos, setDatos] = useState(session);
   const [open, setOpen] = useState(true);
-  const Menus = [
-    {
-      title: "My Bodytech",
-      src: "icon_MyBodytech",
-      gap: true,
-      href: "/bodytech",
-    },
-    { title: "Medical", src: "icon_Medical", href: "medical" },
-    { title: "Operaciones", src: "icon_Operaciones", href: "operaciones" },
-    { title: "Comercial", src: "icon_Comercial", href: "comercial" },
-  ];
+
+  /* Arreglos con el menu general del slider */
+  const menus = Menu;
+
   return (
     <div className="flex">
       <div
@@ -108,23 +102,23 @@ export default function MyBodytech({ session }) {
           Aplicaciones{" "}
         </h3>
         <ul className="pt-6">
-          {Menus.map((Menu, index) => (
-            <Link href={Menu.href}>
+          {menus.map((menu, index) => (
+            <Link href={menu.href}>
               <li
                 key={index}
                 className={`flex bg-gray-100 hover:bg-gray-200 cursor-pointer rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4 
-              ${Menu.gap ? "mt-9" : "mt-2"} ${
+              ${menu.gap ? "mt-9" : "mt-2"} ${
                   index === 0 && "bg-light-white"
                 } `}
               >
                 <img
                   className="w-6 h-6"
-                  src={`/logos/aplicaciones/iconos/${Menu.src}.png`}
+                  src={`/logos/aplicaciones/iconos/${menu.src}.png`}
                 />
                 <span
                   className={`${!open && "hidden"} origin-left duration-200`}
                 >
-                  {Menu.title}
+                  {menu.title}
                 </span>
               </li>
             </Link>

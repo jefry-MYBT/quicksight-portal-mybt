@@ -2,25 +2,19 @@ import Header from "@/components/Header";
 import { useState } from "react";
 import Link from "next/link";
 import { getSession } from "next-auth/react";
+import { Menu } from "@/data/slider";
 
 export default function Medical({ session }) {
   const [datos, setDatos] = useState(session);
   const [open, setOpen] = useState(true);
-  const Menus = [
-    {
-        title: "My Bodytech",
-        src: "icon_MyBodytech",
-        gap: true,
-        href: "/bodytech",
-      },
-      { title: "Medical", src: "icon_Medical", href: "medical" },
-      { title: "Operaciones", src: "icon_Operaciones", href: "operaciones" },
-      { title: "Comercial", src: "icon_Comercial", href: "comercial" },
-  ];
+
+  /* Arreglos con el menu general del slider */
+  const menus = Menu;
+
   const contentCard =[
     {
       title:"Control de Accesos",
-      img:"/gif/accesos.gif",
+      img:"/gif/operaciones/accesos.gif",
       description:"Panel encargado de monitorear los accesos.",
       href: "https://us-east-1.quicksight.aws.amazon.com/sn/dashboards/43de66f7-4db5-4f8d-9676-ad31c8bb13e8"
     },
@@ -74,7 +68,7 @@ export default function Medical({ session }) {
           <img
             src="/logos/logo_bi4.png"
             className={`cursor-pointer duration-500 w-20 h-20 mt-[-26px] ${
-              open && "rotate-[360deg] "
+              open ? "rotate-[360deg] " : "w-10 h-10 ml-[20px]"
             }`}
           />
           <h1
@@ -115,24 +109,24 @@ export default function Medical({ session }) {
           {" "}
           Aplicaciones{" "}
         </h3>
-        <ul className="pt-6">
-          {Menus.map((Menu, index) => (
-            <Link href={Menu.href}>
+        <ul className="pt-14">
+          {menus.map((menu, index) => (
+            <Link href={menu.href}>
               <li
                 key={index}
                 className={`flex bg-gray-100 hover:bg-gray-200 cursor-pointer rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4 
-              ${Menu.gap ? "mt-9" : "mt-2"} ${
+              ${menu.gap ? "mt-9" : "mt-2"} ${
                   index === 0 && "bg-light-white"
                 } `}
               >
                 <img
                   className="w-6 h-6"
-                  src={`/logos/aplicaciones/iconos/${Menu.src}.png`}
+                  src={`/logos/aplicaciones/iconos/${menu.src}.png`}
                 />
                 <span
                   className={`${!open && "hidden"} origin-left duration-200`}
                 >
-                  {Menu.title}
+                  {menu.title}
                 </span>
               </li>
             </Link>
@@ -203,7 +197,7 @@ export default function Medical({ session }) {
                 {card.description}
               </p>
               <Link href={card.href} target="_blank">
-              <button className=" rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+              <button className="hover:bg-gray-200 hover:text-gray-900 rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
                <spam className="hover:opacity-100">Ingresar</spam>
               </button>
               </Link>

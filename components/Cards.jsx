@@ -2,12 +2,6 @@ import Link from "next/link";
 
 const dataCards = [
   {
-    title: "My Bodytech",
-    color: "blacks",
-    href: "/bodytech",
-    img: "/logos/aplicaciones/iconos/white/mybt.png",
-  },
-  {
     title: "Medical",
     color: "blue-500",
     href: "/medical",
