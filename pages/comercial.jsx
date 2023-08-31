@@ -16,13 +16,13 @@ export default function Medical({ session }) {
       title:"Unidades",
       img:"/gif/comercial/unidades.gif",
       description:"Unidades - Quicksight",
-      href: "https://us-east-1.quicksight.aws.amazon.com/sn/dashboards/4cef9414-d260-4a20-80f7-34a755b69b51/views/c69710fa-8bc0-4e00-9419-df72534192ae"
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/941494d7-5adb-4073-992a-320ce780bf58?directory_alias=bodytechteam"
     },
     {
       title:"Ingresos",
       img:"/gif/comercial/ingresos.gif",
       description:"Ingresos - Quicksight",
-      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/da95351b-f2bf-48f9-834c-2dd469eafb34?directory_alias=bodytechteam"
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/9c752801-8f33-4d9a-acb0-7708f3e15736?directory_alias=bodytechteam"
     }
   ]
   return (
