@@ -13,9 +13,9 @@ export default function Medical({ session }) {
 
   const contentCard =[
     {
-      title:"Software Medico",
+      title:"Software Médico",
       img:"/gif/medical/software_medico.gif",
-      description:"Software Medico - Quicksight",
+      description:"Software Médico - Quicksight",
       href: "https://us-east-1.quicksight.aws.amazon.com/sn/dashboards/4cef9414-d260-4a20-80f7-34a755b69b51/views/c69710fa-8bc0-4e00-9419-df72534192ae"
     },
     {
@@ -181,7 +181,7 @@ export default function Medical({ session }) {
            
             </div>
             <h3 className="font-black text-gray-800 md:text-3xl text-lg animate-fade-up mt-[10px]">
-              ¡Bienvenido(a) a la aplicación de <span className="text-blue-500" >MEDICAL</span>!
+              ¡Bienvenido(a) a el área de <span className="text-blue-500" >MEDICAL</span>!
             </h3>
           </div>
         </div>

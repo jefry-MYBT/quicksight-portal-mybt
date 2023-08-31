@@ -18,6 +18,12 @@ export default function Medical({ session }) {
       description:"Panel encargado de monitorear los accesos.",
       href: "https://us-east-1.quicksight.aws.amazon.com/sn/dashboards/43de66f7-4db5-4f8d-9676-ad31c8bb13e8"
     },
+    {
+      title:"Afiliados - Uso",
+      img:"/gif/operaciones/afiliados.gif",
+      description:"Afiliados - Quicksight",
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/31802f4d-65f5-43e5-8ec9-55a68a34ab3d?directory_alias=bodytechteam"
+    }
   ]
   return (
     <div className="flex">
@@ -174,7 +180,7 @@ export default function Medical({ session }) {
            
             </div>
             <h3 className="font-black text-gray-800 md:text-3xl text-lg animate-fade-up">
-              ¡Bienvenido(a) a la aplicación de <span className="text-purple-500" >OPERACIONES</span>!
+              ¡Bienvenido(a) a el área de <span className="text-purple-500" >OPERACIONES</span>!
             </h3>
           </div>
         </div>

@@ -78,6 +78,7 @@ export default function Sidebar({ session }) {
           Inicio{" "}
         </h3>
         <ul className="pt-6">
+          
           <Link href="/">
             <li
               className={`flex bg-gray-100 hover:bg-gray-200 cursor-pointer rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4`}
@@ -124,7 +125,7 @@ export default function Sidebar({ session }) {
           ))}
         </ul>
         <hr />
-       {/*  <h3
+        {/*  <h3
           className={` ${
             !open && "hidden"
           } text-gray-500 font-medium mt-10 mb-[-10px]`}
@@ -148,6 +149,7 @@ export default function Sidebar({ session }) {
           </Link>
         </ul> */}
       </div>
+
       <div className="h-screen flex-1 p-7">
         <Header datos={datos} />
         <div className="relative h-[38%] mt-5 flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-full h-1/2 z-[-2] mx-auto border border-white bg-white">
@@ -179,6 +181,14 @@ export default function Sidebar({ session }) {
           © Bodytech Corp. Todos los derechos reservados.
         </p>
       </div>
+      <div
+            id="tooltip-right"
+            role="tooltip"
+            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+          >
+            Tooltip on right
+            <div class="tooltip-arrow" data-popper-arrow></div>
+          </div>
     </div>
   );
 }

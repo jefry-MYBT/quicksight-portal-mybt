@@ -1,10 +1,9 @@
 
 export const Menu = 
 [
-    { title: "Medical",     src: "icon_Medical",     href: "medical" },
-    { title: "Operaciones", src: "icon_Operaciones", href: "operaciones" },
     { title: "Comercial",   src: "icon_Comercial",   href: "comercial" },
-  
+    { title: "Operaciones", src: "icon_Operaciones", href: "operaciones" },
+    { title: "Medical",     src: "icon_Medical",     href: "medical" },
 ];
 
 /* { title: "Ilearning",   src:"",                  href:""},

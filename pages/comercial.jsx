@@ -180,7 +180,7 @@ export default function Medical({ session }) {
            
             </div>
             <h3 className="font-black text-gray-800 md:text-3xl text-lg animate-fade-up">
-              ¡Bienvenido(a) a la aplicación <span className="text-red-500" >COMERCIAL</span>!
+              ¡Bienvenido(a) a el área <span className="text-red-500" >COMERCIAL</span>!
             </h3>
           </div>
         </div>
