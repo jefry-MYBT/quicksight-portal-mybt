@@ -17,6 +17,22 @@ export default function Medical({ session }) {
     { title: "Operaciones", src: "icon_Operaciones", href: "operaciones" },
     { title: "Comercial", src: "icon_Comercial", href: "comercial" },
   ];
+
+  const contentCard =[
+    {
+      title:"Software Medico",
+      img:"/gif/software_medico.gif",
+      description:"",
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/dashboards/4cef9414-d260-4a20-80f7-34a755b69b51/views/c69710fa-8bc0-4e00-9419-df72534192ae"
+    },
+    {
+      title:"Programas Entrenamiento",
+      img:"",
+      description:"",
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/da95351b-f2bf-48f9-834c-2dd469eafb34?directory_alias=bodytechteam"
+    }
+  ]
+
   return (
     <div className="flex">
       <div
@@ -161,8 +177,8 @@ export default function Medical({ session }) {
           <div className="w-full md:w-1/3 bg-white grid place-items-center">
             <img
               src="/logos/aplicaciones/Logo_Medical.png"
-              alt="tailwind logo"
-              className="w-[45%] h-[80%] mt-[-3%] mg:w-1/5 animate-fade-up"
+              alt="software_medico"
+              className="w-[50%] h-[80%] mt-[-2%] mg:w-1/5 animate-fade-up"
             />
           </div>
           <div className="w-full md:w-2/3 bg-white flex flex-col space-y-2 p-3">
@@ -171,41 +187,40 @@ export default function Medical({ session }) {
               <div className=""></div>
            
             </div>
-            <h3 className="font-black text-gray-800 md:text-3xl text-lg animate-fade-up">
+            <h3 className="font-black text-gray-800 md:text-3xl text-lg animate-fade-up mt-[10px]">
               ¡Bienvenido(a) a la aplicación de <span className="text-blue-500" >MEDICAL</span>!
             </h3>
           </div>
         </div>
         {/* seccion de las tarjetas */}
         <div className="grid grid-cols-1 mt-[20px] gap-5 md:grid-cols-2 lg:grid-cols-3 animate-fade-up">
+        {contentCard.map((card, i) => (
           <div className="group relative cursor-pointer rounded-lg items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
             <div className="h-96 w-full">
               <img
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                src="/gif/software_medico.gif"
-                alt=""
+                src={card.img}
+                alt={card.title}
               />
             </div>
+            
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
             <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-              <h1 className="font-dmserif text-3xl mt-[-15px] font-semibold text-white">Software Medico</h1>
+              <h1 className="font-dmserif text-3xl mt-[-50%] font-semibold text-white">{card.title}</h1>
               <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                Descripcion del 
-                informe de sofyware medico
-                de ejemplo
+                {card.description}
               </p>
-              <Link href="https://us-east-1.quicksight.aws.amazon.com/sn/dashboards/4cef9414-d260-4a20-80f7-34a755b69b51/views/c69710fa-8bc0-4e00-9419-df72534192ae" target="_blank">
+              <Link href={card.href} target="_blank">
               <button className=" rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
-               <spam className="hover:opacity-100">ir</spam>
+               <spam className="hover:opacity-100">Ingresar</spam>
               </button>
               </Link>
             </div>
           </div>
-       
+             ))};
         </div>
-
         <p className="flex justify-end text-gray-500 font-semibold mt-[12px]">
-          © Bodytech Corp 🧡. Todos los derechos reservados.
+          © Bodytech Corp. Todos los derechos reservados.
         </p>
       </div>
     </div>

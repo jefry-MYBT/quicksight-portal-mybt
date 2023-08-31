@@ -162,7 +162,7 @@ export default function Medical({ session }) {
             <img
               src="/logos/aplicaciones/Logo_Comercial.png"
               alt="tailwind logo"
-              className="w-[45%] h-[80%] mt-[-3%] mg:w-1/5 animate-fade-up"
+              className="w-[50%] h-[80%] mt-[-2%] mg:w-1/5 animate-fade-up"
             />
           </div>
           <div className="w-full md:w-2/3 bg-white flex flex-col space-y-2 p-3">
@@ -179,7 +179,7 @@ export default function Medical({ session }) {
         {/* seccion de las tarjetas */}
 
         <p className="flex justify-end text-gray-500 font-semibold mt-[12px]">
-          © Bodytech Corp 🧡. Todos los derechos reservados.
+          © Bodytech Corp. Todos los derechos reservados.
         </p>
       </div>
     </div>
