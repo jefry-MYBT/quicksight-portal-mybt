@@ -160,6 +160,7 @@ export default function Sidebar({ session }) {
                 }`}
                 src="logos/welcome2.png"
               />
+              
             </div>
           </div>
           <div className="w-full md:w-2/3 bg-[#ccf1fd] flex flex-col space-y-2 p-3 animate-fade-up">
