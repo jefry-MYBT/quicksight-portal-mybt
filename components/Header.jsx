@@ -5,7 +5,7 @@ export default function Header(props) {
   return (
     <div className="flex bg-white justify-between px-4 pb-2 pt-[5px] rounded-lg">
       <div>
-       <img className="w-10/12 mt-[3px] animate-fade-down" src="/logos/texto/logo.png" />
+       <p className="w-full h-full mt-[10px] font-semibold animate-fade-up text-xl tracking-wide">Business Intelligence</p>
         {/* <h1 className="w-10/12 animate-fade-down">Inicio</h1> */}
       </div>
       <Menu as="div">

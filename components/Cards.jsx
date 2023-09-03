@@ -23,7 +23,7 @@ const dataCards = [
 
 export default function Cards() {
   return (
-    <div className="animate-fade-up grid mt-[20px] grid-cols-1 flex justify-center gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
+    <div className="animate-fade-up grid mt-[20px] grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
       {dataCards.map((card, i) => (
         <div className="relative bg-white py-6 px-6 rounded-3xl w-50 my-4 shadow-xl">
           <div

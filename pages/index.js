@@ -55,7 +55,7 @@ export default function Sidebar({ session }) {
           </svg>
         </button>
 
-        <div className="flex gap-x-4 flex justify-center">
+        <div className="flex gap-x-4 justify-center">
           <img
             src="/logos/logo_bi4.png"
             className={`cursor-pointer duration-500 w-20 h-20 mt-[-26px] ${
@@ -78,10 +78,9 @@ export default function Sidebar({ session }) {
           Inicio{" "}
         </h3>
         <ul className="pt-6">
-          
           <Link href="/">
             <li
-              className={`flex bg-gray-100 hover:bg-gray-200 cursor-pointer rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4`}
+              className={`flex bg-gray-100 hover:bg-gray-200 rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4`}
             >
               <img
                 className="w-6 h-6"
@@ -106,7 +105,7 @@ export default function Sidebar({ session }) {
             <Link href={menu.href}>
               <li
                 key={index}
-                className={`flex bg-gray-100 hover:bg-gray-200 cursor-pointer rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4 
+                className={`flex bg-gray-100 hover:bg-gray-200 rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4 
               ${menu.gap ? "mt-9" : "mt-2"} ${
                   index === 0 && "bg-light-white"
                 } `}
@@ -152,15 +151,18 @@ export default function Sidebar({ session }) {
 
       <div className="h-screen flex-1 p-7">
         <Header datos={datos} />
-        <div className="relative h-[38%] mt-5 flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-full h-1/2 z-[-2] mx-auto border border-white bg-white">
-          <div className="w-full md:w-[50%] bg-white grid place-items-center">
-            <img
-              src="/gif/welcome.gif"
-              alt="tailwind logo"
-              className="w-[55%] h-[100%] mt-[-3%] mg:w-1/5 animate-fade-up"
-            />
+        <div className="relative h-[38%] mt-5 flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-full z-[-2] mx-auto border-[#ccf1fd] bg-[#ccf1fd]">
+          <div className="w-full md:w-[50%]  grid place-items-center">
+            <div className="flex justify-center">
+              <img
+                className={
+                  `animate-fade-up ${open ? "h-[90%] w-[85%] mt-[-75px]" : "h-[90%] w-[72%] mt-[-77px]"
+                }`}
+                src="logos/welcome2.png"
+              />
+            </div>
           </div>
-          <div className="w-full md:w-2/3 bg-white flex flex-col space-y-2 p-3 animate-fade-up">
+          <div className="w-full md:w-2/3 bg-[#ccf1fd] flex flex-col space-y-2 p-3 animate-fade-up">
             <div className="flex justify-between item-center">
               <div className="flex items-center"></div>
               <div className=""></div>
@@ -168,10 +170,10 @@ export default function Sidebar({ session }) {
                 {fecha.getFullYear()}
               </div>
             </div>
-            <h3 className="font-black text-gray-800 md:text-3xl text-xl">
-              ¡Bienvenid(a), {session.user.name} <span>👋</span>!
+            <h3 className="text-gray-800 md:text-1xl font-bold text-xl">
+              ¡Bienvenido(a), {session.user.name} <span>👋</span>!
             </h3>
-            <p className="md:text-lg text-gray-500 text-base">
+            <p className="text-lg text-gray-500 md:text-1xl">
               {session.user.email}
             </p>
           </div>
@@ -182,13 +184,13 @@ export default function Sidebar({ session }) {
         </p>
       </div>
       <div
-            id="tooltip-right"
-            role="tooltip"
-            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-          >
-            Tooltip on right
-            <div class="tooltip-arrow" data-popper-arrow></div>
-          </div>
+        id="tooltip-right"
+        role="tooltip"
+        class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+      >
+        Tooltip on right
+        <div class="tooltip-arrow" data-popper-arrow></div>
+      </div>
     </div>
   );
 }
