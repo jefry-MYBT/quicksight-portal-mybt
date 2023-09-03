@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getSession } from "next-auth/react";
 import { Menu } from "@/data/slider";
 import Cards from "@/components/Cards";
+import LogoWelcome from "@/components/LogoWelcome";
 
 export default function Sidebar({ session }) {
   const fecha = new Date();
@@ -153,15 +154,9 @@ export default function Sidebar({ session }) {
         <Header datos={datos} />
         <div className="relative h-[38%] mt-5 flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-full z-[-2] mx-auto border-[#ccf1fd] bg-[#ccf1fd]">
           <div className="w-full md:w-[50%]  grid place-items-center">
-            <div className="flex justify-center">
-              <img
-                className={
-                  `animate-fade-up ${open ? "h-[90%] w-[85%] mt-[-75px]" : "h-[90%] w-[72%] mt-[-77px]"
-                }`}
-                src="logos/welcome2.png"
-              />
-              
-            </div>
+            <LogoWelcome className={
+                  `animate-fade-up ${open ? "h-[10%] w-[85%] mt-[-75px]" : "h-[90%] w-[72%] mt-[-77px]"
+                }`}/>
           </div>
           <div className="w-full md:w-2/3 bg-[#ccf1fd] flex flex-col space-y-2 p-3 animate-fade-up">
             <div className="flex justify-between item-center">

@@ -102,7 +102,7 @@ export default function Login() {
               />
             </svg>
           )}
-          <span>Continuar con Google</span>
+          <span className="font-extrabold" >Continuar con Google</span>
         </button>
         <p className="my-8 text-gray-500	">
           © <span>{fecha.getFullYear()}</span> BodyTech Corp. Todos los derechos
