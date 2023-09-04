@@ -24,28 +24,63 @@ const dataCards = [
 export default function Cards() {
   return (
     <div className="animate-fade-up grid mt-[20px] grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-      {dataCards.map((card, i) => (
-        <div className="relative bg-white py-6 px-6 rounded-3xl w-50 my-4 shadow-xl">
-          <div
-            className={`text-white flex items-center absolute rounded-full py-4 px-4 shadow-xl bg-[#00b8f4]  left-4 -top-6`}
-          >
-            <Link href={card.href}>
-                <img className="h-7 w-7 hover:animate-ping" src={card.img} />
-            </Link>
-          </div>
-          <div className="mt-8">
-            <p className="text-xl font-semibold my-2">{card.title}</p>
-
-            <div className="flex space-x-2 text-gray-400 text-sm my-1">
-              {/*      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                     <p>3 Weeks Left</p> */}
-            </div>
-            <div className="border-t-2 "></div>
-          </div>
+      <div className="flex-shrink-0 m-6 relative overflow-hidden bg-[#fca5a5] rounded-lg max-w-xs shadow-lg">
+      <svg className="absolute bottom-0 left-0 mb-8 scale-150 opacity-10" viewBox="0 0 375 283" fill="none">
+        <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
+        <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
+      </svg>
+      <div className="relative pt-[60px] px-10 flex items-center justify-center">
+        <div className="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3" ></div>
+        <img className="relative w-40 animate-bounce-slow" src="logos/aplicaciones/iconos/icon_Comercial.png" alt="comercial" />
+      </div>
+      <div className="relative text-white px-6 pb-6 mt-6">
+        <span className="block opacity-75 -mb-1">Área</span>
+        <div className="flex justify-between">
+          <span className="block font-semibold text-xl">Comercial</span>
+          <Link href="/comercial">
+          <span className="block bg-white rounded-full text-[#fca5a5] hover:bg-[#fca5a5] hover:text-white text-xs font-bold px-3 py-2 leading-none flex items-center">Ingresar</span>
+          </Link>
         </div>
-      ))}
+      </div>
+    </div>
+    <div className="flex-shrink-0 m-6 relative overflow-hidden bg-[#c084fc] rounded-lg max-w-xs shadow-lg">
+      <svg className="absolute bottom-0 left-0 mb-8 scale-150 opacity-10" viewBox="0 0 375 283" fill="none">
+        <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
+        <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
+      </svg>
+      <div className="relative pt-10 px-10 flex items-center justify-center">
+        <div className="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3" ></div>
+        <img className="relative w-40 animate-bounce-slow" src="logos/aplicaciones/iconos/icon_Operaciones.png" alt="operaciones" />
+      </div>
+      <div className="relative text-white px-6 pb-6 mt-6">
+        <span className="block opacity-75 -mb-1">Área</span>
+        <div className="flex justify-between">
+          <span className="block font-semibold text-xl">Operaciones</span>
+          <Link href="/operaciones">
+          <span className="block bg-white rounded-full hover:bg-[#c084fc] hover:text-white text-[#c084fc] text-xs font-bold px-3 py-2 leading-none flex items-center">Ingresar</span>
+          </Link>
+        </div>
+      </div>
+    </div>
+    <div className="flex-shrink-0 m-6 relative overflow-hidden bg-[#60a5fa] rounded-lg max-w-xs shadow-lg">
+      <svg className="absolute bottom-0 left-0 mb-8 scale-150 opacity-10" viewBox="0 0 375 283" fill="none">
+        <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
+        <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
+      </svg>
+      <div className="relative pt-10 px-10 flex items-center justify-center">
+        <div className="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3" ></div>
+        <img className="relative w-40 animate-bounce-slow" src="logos/aplicaciones/iconos/icon_Medical.png" alt="medical" />
+      </div>
+      <div className="relative text-white px-6 pb-6 mt-6">
+        <span className="block opacity-75 -mb-1">Área</span>
+        <div className="flex justify-between">
+          <span className="block font-semibold text-xl">Medical</span>
+          <Link href="/medical">
+          <span className="block hover:bg-[#60a5fa] hover:text-white bg-white rounded-full text-[#60a5fa] text-xs font-bold px-3 py-2 leading-none flex items-center">Ingresar</span>
+          </Link>
+        </div>
+      </div>
+    </div>
     </div>
   );
 }

@@ -95,7 +95,7 @@ export default function Medical({ session }) {
         <ul className="pt-6">
           <Link href="/">
             <li
-              className={`flex bg-gray-100 hover:bg-gray-200 cursor-pointer rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4`}
+              className={`flex bg-gray-100 hover:bg-gray-200 rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4`}
             >
               <img
                 className="w-6 h-6"

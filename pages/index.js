@@ -10,16 +10,17 @@ export default function Sidebar({ session }) {
   const fecha = new Date();
   const [datos, setDatos] = useState(session);
   const [open, setOpen] = useState(true);
+
   const menus = Menu;
   return (
     <div className="flex">
       <div
         className={` ${
           open ? "w-72" : "w-20 "
-        } bg-white rounded-lg h-screen p-5 pt-8 relative duration-300`}
+        } bg-white rounded-lg h-[700px] p-5 pt-8 relative duration-300 dark:bg-[#0f172a]`}
       >
         <button
-          className={`animate-bounce bg-white absolute -right-3 top-9 w-7
+          className={`animate-bounce bg-white dark:bg-[#0f172a] dark:border-[#0f172a] absolute -right-3 top-9 w-7
            border-white border-2 rounded-full  ${!open && "rotate-180"}`}
           onClick={() => setOpen(!open)}
         >
@@ -81,7 +82,7 @@ export default function Sidebar({ session }) {
         <ul className="pt-6">
           <Link href="/">
             <li
-              className={`flex bg-gray-100 hover:bg-gray-200 rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4`}
+              className={`flex dark:text-white bg-gray-100 hover:bg-gray-200 dark:hover:bg-[#1e293b] rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4`}
             >
               <img
                 className="w-6 h-6"
@@ -106,7 +107,7 @@ export default function Sidebar({ session }) {
             <Link href={menu.href}>
               <li
                 key={index}
-                className={`flex bg-gray-100 hover:bg-gray-200 rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4 
+                className={`flex dark:hover:bg-[#1e293b] dark:text-white hover:bg-gray-200 bg-gray-100 rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4 
               ${menu.gap ? "mt-9" : "mt-2"} ${
                   index === 0 && "bg-light-white"
                 } `}
@@ -124,7 +125,6 @@ export default function Sidebar({ session }) {
             </Link>
           ))}
         </ul>
-        <hr />
         {/*  <h3
           className={` ${
             !open && "hidden"
@@ -152,21 +152,21 @@ export default function Sidebar({ session }) {
 
       <div className="h-screen flex-1 p-7">
         <Header datos={datos} />
-        <div className="relative h-[38%] mt-5 flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-full z-[-2] mx-auto border-[#ccf1fd] bg-[#ccf1fd]">
+        <div className="relative h-[38%] mt-5 flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-full z-[-2] mx-auto border-[#ccf1fd] bg-[#ccf1fd] dark:bg-[#172554]">
           <div className="w-full md:w-[50%]  grid place-items-center">
             <LogoWelcome className={
                   `animate-fade-up ${open ? "h-[10%] w-[85%] mt-[-75px]" : "h-[90%] w-[72%] mt-[-77px]"
                 }`}/>
           </div>
-          <div className="w-full md:w-2/3 bg-[#ccf1fd] flex flex-col space-y-2 p-3 animate-fade-up">
+          <div className="w-full md:w-2/3 bg-[#ccf1fd] dark:bg-[#172554] dark:text-white flex flex-col space-y-2 p-3 animate-fade-up">
             <div className="flex justify-between item-center">
               <div className="flex items-center"></div>
               <div className=""></div>
-              <div className="bg-gray-200 px-3 py-1 rounded-full text-xs font-medium text-gray-800 hidden md:block">
+              <div className="bg-gray-200 dark:bg-[#1e293b] dark:text-white  px-3 py-1 rounded-full text-xs font-medium text-gray-800 hidden md:block">
                 {fecha.getFullYear()}
               </div>
             </div>
-            <h3 className="text-gray-800 md:text-1xl font-bold text-xl">
+            <h3 className="text-gray-800 md:text-1xl dark:text-white font-bold text-xl">
               ¡Bienvenido(a), {session.user.name} <span>👋</span>!
             </h3>
             <p className="text-lg text-gray-500 md:text-1xl">
