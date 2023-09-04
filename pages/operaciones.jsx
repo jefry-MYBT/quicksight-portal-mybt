@@ -23,6 +23,12 @@ export default function Medical({ session }) {
       img:"/gif/operaciones/afiliados.gif",
       description:"Afiliados - Quicksight",
       href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/31802f4d-65f5-43e5-8ec9-55a68a34ab3d?directory_alias=bodytechteam"
+    },
+    {
+      title:"Novedades",
+      img:"/gif/operaciones/novedades.gif",
+      description:"Novedades - Quicksight",
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/b624b4cf-132f-415d-ad72-64bbc3a28297?directory_alias=bodytechteam"
     }
   ]
   return (
