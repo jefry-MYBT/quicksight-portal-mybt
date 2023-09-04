@@ -5,12 +5,12 @@ import { getSession } from "next-auth/react";
 import { Menu } from "@/data/slider";
 import Cards from "@/components/Cards";
 import LogoWelcome from "@/components/LogoWelcome";
+import { useRouter } from "next/router";
 
 export default function Sidebar({ session }) {
-  const fecha = new Date();
+  const router = useRouter()
   const [datos, setDatos] = useState(session);
   const [open, setOpen] = useState(true);
-
   const userCondition = session.user.email === "joan.gomez@bodytechcorp.com" ||
   session.user.email === "johan.farfan@bodytechcorp.com" ||
   session.user.email === "estefania.sierra@bodytechcorp.com" ||
@@ -21,7 +21,27 @@ export default function Sidebar({ session }) {
   session.user.email === "rafael.socarras@bodytechcorp.com" ||
   session.user.email === "john.mena@bodytechcorp.com";
 
+  if (!userCondition) {
+    router.push("/");
+  }
+
   const menus = Menu;
+
+  const contentCard =[
+    {
+      title:"Monitoreo de Accesos",
+      img:"/gif/operaciones/accesos.gif",
+      description:"Monitoreo de Accesos - Quicksight",
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/dashboards/43de66f7-4db5-4f8d-9676-ad31c8bb13e8"
+    },
+    {
+      title:"Invoice Payment",
+      img:"/gif/tecnologia/invoice_payment.gif",
+      description:"Invoice Payment - Quicksight",
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/31802f4d-65f5-43e5-8ec9-55a68a34ab3d?directory_alias=bodytechteam"
+    },
+  ]
+
   return (
     <div className="flex">
       <div
@@ -136,8 +156,7 @@ export default function Sidebar({ session }) {
           ))}
 
           {/* Condicional para el área de tecnología */}
-         {userCondition ? (
-            <Link href="/tecnologia">
+         { userCondition ? (
             <li className="flex mt-2 dark:hover:bg-[#1e293b] dark:text-white hover:bg-gray-200 bg-gray-100 rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4">
               <img
                 className="w-6 h-6"
@@ -146,7 +165,6 @@ export default function Sidebar({ session }) {
                 Tecnología
               </span>
             </li>
-            </Link>
           ) : (
             <div></div>
           )}
@@ -178,44 +196,55 @@ export default function Sidebar({ session }) {
 
       <div className="h-screen flex-1 p-7">
         <Header datos={datos} />
-        <div className="relative h-[38%] mt-5 flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-full z-[-2] mx-auto border-[#ccf1fd] bg-[#ccf1fd] dark:bg-[#172554]">
-          <div className="w-full md:w-[50%]  grid place-items-center">
-            <LogoWelcome
-              className={`animate-fade-up ${
-                open
-                  ? "h-[10%] w-[85%] mt-[-75px]"
-                  : "h-[90%] w-[72%] mt-[-77px]"
-              }`}
-            />
+        <div className="relative mt-5 flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-full h-[20%] z-[-2] mx-auto border border-white bg-white">
+          <div className="w-full md:w-1/3 bg-white grid place-items-center">
+           {/*   <img
+              src="/gif/tecnologia/welcome.gif"
+              alt="gif_tecnologia"
+              className="w-[50%] h-[85%] mt-[-2%] mg:w-1/5 animate-fade-up"
+            />  */}
           </div>
-          <div className="w-full md:w-2/3 bg-[#ccf1fd] dark:bg-[#172554] dark:text-white flex flex-col space-y-2 p-3 animate-fade-up">
+          <div className="w-full md:w-2/3 bg-white flex flex-col space-y-2 p-3">
             <div className="flex justify-between item-center">
               <div className="flex items-center"></div>
               <div className=""></div>
-              <div className="bg-gray-200 dark:bg-[#1e293b] dark:text-white  px-3 py-1 rounded-full text-xs font-medium text-gray-800 hidden md:block">
-                {fecha.getFullYear()}
-              </div>
+           
             </div>
-            <h3 className="text-gray-800 md:text-1xl dark:text-white font-bold text-xl">
-              ¡Bienvenido(a), {session.user.name} <span>👋</span>!
+            <h3 className="font-black text-gray-800 md:text-3xl text-lg animate-fade-up">
+              ¡Bienvenido(a) a el área de <span className="text-[#00b8f4]" >TECNOLOGÍA</span>!
             </h3>
-            <p className="text-lg text-gray-500 md:text-1xl">
-              {session.user.email}
-            </p>
           </div>
         </div>
-        <Cards />
-        <p className="flex justify-end text-gray-500 font-semibold">
+         {/* seccion de las tarjetas */}
+         <div className="grid grid-cols-1 mt-[20px] gap-5 md:grid-cols-2 lg:grid-cols-3 animate-fade-up">
+        {contentCard.map((card, i) => (
+          <div className="group relative cursor-pointer rounded-lg items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+            <div className="h-96 w-full">
+              <img
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                src={card.img}
+                alt={card.title}
+              />
+            </div>
+            
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+            <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+              <h1 className="font-dmserif text-3xl mt-[-50%] font-semibold text-white">{card.title}</h1>
+              <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                {card.description}
+              </p>
+              <Link href={card.href} target="_blank">
+              <button className="hover:bg-gray-200 hover:text-gray-900 rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+               <spam className="hover:opacity-100">Ingresar</spam>
+              </button>
+              </Link>
+            </div>
+          </div>
+             ))};
+        </div>
+        <p className="flex justify-end text-gray-500 font-semibold mt-[12px]">
           © Bodytech Corp. Todos los derechos reservados.
         </p>
-      </div>
-      <div
-        id="tooltip-right"
-        role="tooltip"
-        class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-      >
-        Tooltip on right
-        <div class="tooltip-arrow" data-popper-arrow></div>
       </div>
     </div>
   );

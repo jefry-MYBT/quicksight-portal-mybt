@@ -7,30 +7,38 @@ import { Menu } from "@/data/slider";
 export default function Medical({ session }) {
   const [datos, setDatos] = useState(session);
   const [open, setOpen] = useState(true);
-
-  /* Arreglos con el menu general del slider */
+  const userCondition =
+    session.user.email === "joan.gomez@bodytechcorp.com" ||
+    session.user.email === "johan.farfan@bodytechcorp.com" ||
+    session.user.email === "estefania.sierra@bodytechcorp.com" ||
+    session.user.email === "edwin.castiblanco@bodytechcorp.com" ||
+    session.user.email === "jefry.maldonado@bodytechcorp.com" ||
+    session.user.email === "yonhfreen.quintero@bodytechcorp.com" ||
+    session.user.email === "wilson.coy@bodytechcorp.com" ||
+    session.user.email === "rafael.socarras@bodytechcorp.com" ||
+    session.user.email === "john.mena@bodytechcorp.com";
   const menus = Menu;
 
-  const contentCard =[
+  const contentCard = [
     {
-      title:"Control de Accesos",
-      img:"/gif/operaciones/accesos.gif",
-      description:"Panel encargado de monitorear los accesos.",
-      href: "https://us-east-1.quicksight.aws.amazon.com/sn/dashboards/43de66f7-4db5-4f8d-9676-ad31c8bb13e8"
+      title: "Control de Accesos",
+      img: "/gif/operaciones/accesos.gif",
+      description: "Panel encargado de monitorear los accesos.",
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/dashboards/43de66f7-4db5-4f8d-9676-ad31c8bb13e8",
     },
     {
-      title:"Afiliados - Uso",
-      img:"/gif/operaciones/afiliados.gif",
-      description:"Afiliados - Quicksight",
-      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/31802f4d-65f5-43e5-8ec9-55a68a34ab3d?directory_alias=bodytechteam"
+      title: "Afiliados - Uso",
+      img: "/gif/operaciones/afiliados.gif",
+      description: "Afiliados - Quicksight",
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/31802f4d-65f5-43e5-8ec9-55a68a34ab3d?directory_alias=bodytechteam",
     },
     {
-      title:"Novedades",
-      img:"/gif/operaciones/novedades.gif",
-      description:"Novedades - Quicksight",
-      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/b624b4cf-132f-415d-ad72-64bbc3a28297?directory_alias=bodytechteam"
-    }
-  ]
+      title: "Novedades",
+      img: "/gif/operaciones/novedades.gif",
+      description: "Novedades - Quicksight",
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/b624b4cf-132f-415d-ad72-64bbc3a28297?directory_alias=bodytechteam",
+    },
+  ];
   return (
     <div className="flex">
       <div
@@ -143,8 +151,25 @@ export default function Medical({ session }) {
               </li>
             </Link>
           ))}
+          {/* Condicional para el área de tecnología */}
+          {userCondition ? (
+            <Link href="/tecnologia">
+              <li className="flex mt-2 dark:hover:bg-[#1e293b] dark:text-white hover:bg-gray-200 bg-gray-100 rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4">
+                <img
+                  className="w-6 h-6"
+                  src={`/logos/aplicaciones/iconos/tecnologia.png`}
+                />
+                <span
+                  className={`${!open && "hidden"} origin-left duration-200`}
+                >
+                  Tecnología
+                </span>
+              </li>
+            </Link>
+          ) : (
+            <div></div>
+          )}
         </ul>
-        <hr />
         {/* <h3
           className={` ${
             !open && "hidden"
@@ -183,39 +208,42 @@ export default function Medical({ session }) {
             <div className="flex justify-between item-center">
               <div className="flex items-center"></div>
               <div className=""></div>
-           
             </div>
             <h3 className="font-black text-gray-800 md:text-3xl text-lg animate-fade-up">
-              ¡Bienvenido(a) a el área de <span className="text-purple-500" >OPERACIONES</span>!
+              ¡Bienvenido(a) a el área de{" "}
+              <span className="text-purple-500">OPERACIONES</span>!
             </h3>
           </div>
         </div>
-         {/* seccion de las tarjetas */}
-         <div className="grid grid-cols-1 mt-[20px] gap-5 md:grid-cols-2 lg:grid-cols-3 animate-fade-up">
-        {contentCard.map((card, i) => (
-          <div className="group relative cursor-pointer rounded-lg items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
-            <div className="h-96 w-full">
-              <img
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                src={card.img}
-                alt={card.title}
-              />
+        {/* seccion de las tarjetas */}
+        <div className="grid grid-cols-1 mt-[20px] gap-5 md:grid-cols-2 lg:grid-cols-3 animate-fade-up">
+          {contentCard.map((card, i) => (
+            <div className="group relative cursor-pointer rounded-lg items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+              <div className="h-96 w-full">
+                <img
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                  src={card.img}
+                  alt={card.title}
+                />
+              </div>
+
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+              <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+                <h1 className="font-dmserif text-3xl mt-[-50%] font-semibold text-white">
+                  {card.title}
+                </h1>
+                <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  {card.description}
+                </p>
+                <Link href={card.href} target="_blank">
+                  <button className="hover:bg-gray-200 hover:text-gray-900 rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                    <spam className="hover:opacity-100">Ingresar</spam>
+                  </button>
+                </Link>
+              </div>
             </div>
-            
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
-            <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-              <h1 className="font-dmserif text-3xl mt-[-50%] font-semibold text-white">{card.title}</h1>
-              <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                {card.description}
-              </p>
-              <Link href={card.href} target="_blank">
-              <button className="hover:bg-gray-200 hover:text-gray-900 rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
-               <spam className="hover:opacity-100">Ingresar</spam>
-              </button>
-              </Link>
-            </div>
-          </div>
-             ))};
+          ))}
+          ;
         </div>
         <p className="flex justify-end text-gray-500 font-semibold mt-[12px]">
           © Bodytech Corp. Todos los derechos reservados.

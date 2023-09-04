@@ -13,9 +13,7 @@ export default function Header(props) {
       document.querySelector('html').classList.remove('dark')
     }
   }, [theme]);
-
-  console.log('el tema->' + theme)
-
+  
   const changeTheme = () => {
     setTheme(prevTheme => prevTheme === "light" ? "dark" : "light")
   }

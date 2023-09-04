@@ -7,9 +7,17 @@ import { Menu } from "@/data/slider";
 export default function Medical({ session }) {
   const [datos, setDatos] = useState(session);
   const [open, setOpen] = useState(true);
-
-  /* Arreglos con el menu general del slider */
+  const userCondition = session.user.email === "joan.gomez@bodytechcorp.com" ||
+  session.user.email === "johan.farfan@bodytechcorp.com" ||
+  session.user.email === "estefania.sierra@bodytechcorp.com" ||
+  session.user.email === "edwin.castiblanco@bodytechcorp.com" ||
+  session.user.email === "jefry.maldonado@bodytechcorp.com" ||
+  session.user.email === "yonhfreen.quintero@bodytechcorp.com" ||
+  session.user.email === "wilson.coy@bodytechcorp.com" ||
+  session.user.email === "rafael.socarras@bodytechcorp.com" ||
+  session.user.email === "john.mena@bodytechcorp.com";
   const menus = Menu;
+
 
   const contentCard =[
     {
@@ -138,8 +146,22 @@ export default function Medical({ session }) {
               </li>
             </Link>
           ))}
+        {/* Condicional para el área de tecnología */}
+        { userCondition ? (
+          <Link href="/tecnologia">
+            <li className="flex mt-2 dark:hover:bg-[#1e293b] dark:text-white hover:bg-gray-200 bg-gray-100 rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4">
+              <img
+                className="w-6 h-6"
+                src={`/logos/aplicaciones/iconos/tecnologia.png`} />
+              <span className={`${!open && "hidden"} origin-left duration-200`}>
+                Tecnología
+              </span>
+            </li>
+            </Link>
+          ) : (
+            <div></div>
+          )}
         </ul>
-        <hr />
        {/*  <h3
           className={` ${
             !open && "hidden"
