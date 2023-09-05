@@ -1,6 +1,6 @@
 export default function LogoWelcome() {
     return (
-        <svg className="h-[110%] w-[100%] mt-[-5px]" width="1933" height="1222" viewBox="0 0 1933 1222" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+        <svg className="h-[110%] w-[100%] mt-[-5px] animate-fade-up" width="1933" height="1222" viewBox="0 0 1933 1222" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
             <g id="Group 1">
                 <rect id="Coach-bro (2)" width="1933" height="1188" fill="url(#pattern0)" />
                 <rect id="Gym-rafiki (3)" className="animate-bounce-slow" x="180" y="119" width="1512" height="1048" fill="url(#pattern1)" />
