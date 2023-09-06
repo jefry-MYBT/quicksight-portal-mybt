@@ -21,6 +21,7 @@ export default function Tecnologia({ session }) {
   if (!userCondition) {
     router.push("/");
   }
+
   const contentCard =[
     {
       title:"Monitoreo de Accesos",

@@ -29,9 +29,9 @@ export default function Cards() {
         <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
         <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
       </svg>
-      <div className="relative pt-[60px] px-10 flex items-center justify-center">
+      <div className="relative pt-10 px-10 flex items-center justify-center">
         <div className="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3" ></div>
-        <img className="relative w-40 animate-bounce-slow" src="logos/aplicaciones/iconos/icon_Comercial.png" alt="comercial" />
+        <img className="relative w-40 animate-bounce-slow" src="logos/aplicaciones/botys/comercial.png" alt="comercial" />
       </div>
       <div className="relative text-white px-6 pb-6 mt-6">
         <span className="block opacity-75 -mb-1">Área</span>
@@ -50,7 +50,7 @@ export default function Cards() {
       </svg>
       <div className="relative pt-10 px-10 flex items-center justify-center">
         <div className="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3" ></div>
-        <img className="relative w-40 animate-bounce-slow" src="logos/aplicaciones/iconos/icon_Operaciones.png" alt="operaciones" />
+        <img className="relative w-40 animate-bounce-slow" src="logos/aplicaciones/botys/operaciones.png" alt="operaciones" />
       </div>
       <div className="relative text-white px-6 pb-6 mt-6">
         <span className="block opacity-75 -mb-1">Área</span>
@@ -69,7 +69,7 @@ export default function Cards() {
       </svg>
       <div className="relative pt-10 px-10 flex items-center justify-center">
         <div className="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3" ></div>
-        <img className="relative w-40 animate-bounce-slow" src="logos/aplicaciones/iconos/icon_Medical.png" alt="medical" />
+        <img className="relative w-40 animate-bounce-slow" src="logos/aplicaciones/botys/medical.png" alt="medical" />
       </div>
       <div className="relative text-white px-6 pb-6 mt-6">
         <span className="block opacity-75 -mb-1">Área</span>
