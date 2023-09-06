@@ -20,7 +20,6 @@ export default function Login() {
       <div className="flex flex-col justify-center items-center w-full">
         <img src="/logos/logo_bi10.png" className="w-32" />
         <h2 className="my-8 font-display font-medium text-2xl text-gray-700 text-center">
-          
           Bienvenido
         </h2>
         <button
@@ -102,7 +101,7 @@ export default function Login() {
               />
             </svg>
           )}
-          <span className="font-extrabold" >Continuar con Google</span>
+          <span className="font-extrabold">Continuar con Google</span>
         </button>
         <p className="my-8 text-gray-500	">
           © <span>{fecha.getFullYear()}</span> BodyTech Corp. Todos los derechos

@@ -9,6 +9,7 @@ export default function Home({ session }) {
   const fecha = new Date();
   const [datos, setDatos] = useState(session);
   const [open, setOpen] = useState(true);
+
   return (
     <div className="flex">
       <Sidebar datos={datos} />
