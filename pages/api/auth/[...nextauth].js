@@ -18,5 +18,8 @@ export default NextAuth({
             clientSecret:process.env.GOOGLE_CLIENT_SECRET ?? ""
         })
     ],
+    session:{
+        maxAge: 1 * 60 * 60  /* la sesión sólo durará 1 hora por motivos de seguridad, si necesita ampliar sólo cambie el numero 1 por el numero de hora que desea maneter la sesión */
+    },
     secret: process.env.NEXTAUTH_SECRET,
 });
