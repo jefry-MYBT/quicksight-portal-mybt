@@ -2,10 +2,13 @@ import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
 
 export default NextAuth({
+    pages: {
+        error: '/login'
+    },
     callbacks: {
-        async signIn({account, profile}) {
+        async signIn({account, profile, callbackUrl}) {
             if (account.provider === "google") {
-                return profile.email_verified && ( profile.email.endsWith("@bodytechcorp.com") || profile.email.endsWith("@athleticgym.com.co")) 
+                return profile.email_verified && ( profile.email.endsWith("@bodytechcorp.com") || profile.email.endsWith("@athleticgym.com.co") || profile.email.endsWith("@fitnessmarket.com.co")) 
             }
         },
     },

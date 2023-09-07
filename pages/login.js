@@ -1,10 +1,36 @@
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import LoginImg from "@/components/LoginIMG";
+import Swal from "sweetalert2";
+import { useEffect, useState } from "react";
+
 export default function Login() {
+  const [login, setLogin] = useState(false);
   const { data: session, status } = useSession();
   const router = useRouter();
   const fecha = new Date();
+  const {error} = router.query;
+
+  const errors ={
+    AccessDenied:"Acceso Denegado",
+    default:"Error"
+  }
+
+  const ComponentError = ({ error }) =>{
+    const errorMessage = error && (errors[error] ?? errors.default);
+    return  useEffect(()=>{
+      if (error === 'AccessDenied') {
+        setLogin(false)
+        Swal.fire({
+          icon: "error",
+          title: errorMessage
+        }).then((res) =>{
+          router.push('/login')
+        })
+      }
+    })
+  
+  }
 
   if (status !== "loading" && status === "authenticated") {
     router.push("/");
@@ -103,6 +129,7 @@ export default function Login() {
           )}
           <span className="font-extrabold">Continuar con Google</span>
         </button>
+        {error && <ComponentError error={error} />}
         <p className="my-8 text-gray-500	">
           © <span>{fecha.getFullYear()}</span> BodyTech Corp. Todos los derechos
           reservados.
