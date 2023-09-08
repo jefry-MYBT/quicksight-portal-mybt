@@ -10,7 +10,13 @@ export default function Medical({ session }) {
     {
       title: "Control de Accesos",
       img: "/gif/operaciones/accesos.gif",
-      description: "Panel encargado de monitorear los accesos.",
+      description: "Control de Accesos -  Quicksight",
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/dashboards/43de66f7-4db5-4f8d-9676-ad31c8bb13e8",
+    },
+    {
+      title: "Almacenamiento",
+      img: "/gif/operaciones/almacenamiento.gif",
+      description: "Almacenamiento - Quicksight",
       href: "https://us-east-1.quicksight.aws.amazon.com/sn/dashboards/43de66f7-4db5-4f8d-9676-ad31c8bb13e8",
     },
     {
@@ -25,12 +31,12 @@ export default function Medical({ session }) {
       description: "Novedades - Quicksight",
       href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/b624b4cf-132f-415d-ad72-64bbc3a28297?directory_alias=bodytechteam",
     },
-    {
+   /*  {
       title: "Grupales",
       img: "/gif/operaciones/Grupales.gif",
       description: "Grupales - Quicksight",
       href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/609adf52-7e31-47c1-b5a5-0fa30ca2259a?directory_alias=bodytechteam",
-    },
+    }, */
   ];
   return (
     <div className="flex">
