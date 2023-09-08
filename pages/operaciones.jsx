@@ -15,7 +15,7 @@ export default function Medical({ session }) {
     },
     {
       title: "Almacenamiento",
-      img: "/gif/operaciones/almacenamiento.gif",
+      img: "/gif/operaciones/novedades.gif",
       description: "Almacenamiento - Quicksight",
       href: "https://us-east-1.quicksight.aws.amazon.com/sn/dashboards/43de66f7-4db5-4f8d-9676-ad31c8bb13e8",
     },
@@ -27,7 +27,7 @@ export default function Medical({ session }) {
     },
     {
       title: "Novedades",
-      img: "/gif/operaciones/novedades.gif",
+      img: "/gif/operaciones/almacenamiento.gif",
       description: "Novedades - Quicksight",
       href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/b624b4cf-132f-415d-ad72-64bbc3a28297?directory_alias=bodytechteam",
     },
