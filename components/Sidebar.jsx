@@ -15,7 +15,8 @@ export default function Siderbar(props) {
     session.user.email === "yonhfreen.quintero@bodytechcorp.com" ||
     session.user.email === "wilson.coy@bodytechcorp.com" ||
     session.user.email === "rafael.socarras@bodytechcorp.com" ||
-    session.user.email === "john.mena@bodytechcorp.com";
+    session.user.email === "john.mena@bodytechcorp.com" ||
+    session.user.email === "oscar.maldonado@bodytechcorp.com";
   return (
     <div>
       <div

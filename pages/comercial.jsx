@@ -12,7 +12,7 @@ export default function Medical({ session }) {
       title: "Unidades",
       img: "/gif/comercial/unidades.gif",
       description: "Unidades - Quicksight",
-      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/941494d7-5adb-4073-992a-320ce780bf58?directory_alias=bodytechteam",
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/a1d9001e-d550-4510-ac86-6d7a87c45e66?directory_alias=bodytechteam",
     },
     {
       title: "Ingresos",
