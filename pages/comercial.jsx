@@ -18,7 +18,7 @@ export default function Medical({ session }) {
       title: "Ingresos",
       img: "/gif/comercial/ingresos.gif",
       description: "Ingresos - Quicksight",
-      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/9c752801-8f33-4d9a-acb0-7708f3e15736?directory_alias=bodytechteam",
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/23e47f35-9421-4f08-893e-d0b6b49e0c0e?directory_alias=bodytechteam",
     },
   ];
   return (
