@@ -40,7 +40,7 @@ export default function Medical({ session }) {
               <div className=""></div>
             </div>
             <h3 className="font-black text-gray-800 md:text-3xl dark:bg-[#172554] dark:text-white text-lg animate-fade-up">
-              ¡Bienvenid@ a el área{" "}
+              ¡Bienvenid@ al área{" "}
               <span className="text-red-500">COMERCIAL</span>!
             </h3>
           </div>

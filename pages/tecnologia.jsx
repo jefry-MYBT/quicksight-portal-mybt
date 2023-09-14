@@ -58,7 +58,7 @@ export default function Tecnologia({ session }) {
            
             </div>
             <h3 className="font-black dark:bg-[#172554] dark:border-[#172554] dark:text-white text-gray-800 md:text-3xl text-lg animate-fade-up">
-              ¡Bienvenid@ a el área de <span className="text-[#00b8f4]" >TECNOLOGÍA</span>!
+              ¡Bienvenid@ al área de <span className="text-[#00b8f4]" >TECNOLOGÍA</span>!
             </h3>
           </div>
         </div>
