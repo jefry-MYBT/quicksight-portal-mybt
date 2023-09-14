@@ -40,13 +40,13 @@ export default function Medical({ session }) {
               <div className=""></div>
             </div>
             <h3 className="font-black text-gray-800 md:text-3xl dark:bg-[#172554] dark:text-white text-lg animate-fade-up">
-              ¡Bienvenido(a) a el área{" "}
+              ¡Bienvenid@ a el área{" "}
               <span className="text-red-500">COMERCIAL</span>!
             </h3>
           </div>
         </div>
         {/* seccion de las tarjetas */}
-        <div className="grid grid-cols-1 mt-[20px] gap-5 md:grid-cols-2 lg:grid-cols-3 animate-fade-up">
+        <div className="grid grid-cols-1 mt-[20px] gap-5 md:grid-cols-2 lg:grid-cols-4 animate-fade-up">
           {contentCard.map((card, i) => (
             <div className="group relative cursor-pointer rounded-lg items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
               <div className="h-96 w-full">
@@ -59,7 +59,7 @@ export default function Medical({ session }) {
 
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
               <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-                <h1 className="font-dmserif text-3xl mt-[-50%] font-semibold text-white">
+                <h1 className="font-dmserif text-2xl mt-[-50%] font-semibold text-white">
                   {card.title}
                 </h1>
                 <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">

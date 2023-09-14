@@ -34,7 +34,7 @@ export default function Home({ session }) {
               </div>
             </div>
             <h3 className="text-gray-800 md:text-1xl dark:text-white font-bold text-xl">
-              ¡Bienvenido(a), {session.user.name} <span>👋</span>!
+              ¡Bienvenid@, {session.user.name} <span>👋</span>!
             </h3>
             <p className="text-lg text-gray-500 md:text-1xl">
               {session.user.email}

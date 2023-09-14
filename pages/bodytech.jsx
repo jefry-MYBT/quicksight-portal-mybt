@@ -166,7 +166,7 @@ export default function MyBodytech({ session }) {
            
             </div>
             <h3 className="animate-fade-up font-black text-gray-800 md:text-3xl text-lg">
-              ¡Bienvenido(a) a el área de <span className="text-orange-500" >MY BODYTECH</span>!
+              ¡Bienvenid@ a el área de <span className="text-orange-500" >MY BODYTECH</span>!
             </h3>
           </div>
         </div>
