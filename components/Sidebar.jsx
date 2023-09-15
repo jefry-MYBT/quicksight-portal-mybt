@@ -29,6 +29,7 @@ export default function Siderbar(props) {
           onClick={() => setOpen(!open)}
         >
           <svg
+            transform={`rotate(180) ${open && "rotate(360)"}`}
             viewBox="0 0 1024 1024"
             class="icon"
             version="1.1"
