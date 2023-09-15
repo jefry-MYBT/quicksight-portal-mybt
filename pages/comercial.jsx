@@ -20,6 +20,12 @@ export default function Medical({ session }) {
       description: "Ingresos - Quicksight",
       href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/23e47f35-9421-4f08-893e-d0b6b49e0c0e?directory_alias=bodytechteam",
     },
+    {
+      title: "CRM",
+      img: "/gif/comercial/crm.gif",
+      description: "CRM - Quicksight",
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/ffae0f18-e7d9-41d1-9f3e-e5c0ffad84b6?directory_alias=bodytechteam",
+    }
   ];
   return (
     <div className="flex">
