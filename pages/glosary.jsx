@@ -35,7 +35,7 @@ export default function Glosary({ session }) {
            
             </div>
             <h3 className="font-black dark:bg-[#172554] dark:text-white text-gray-800 md:text-2xl text-lg animate-fade-up mt-[10px]">
-              ¡Bienvenid@ a el área de <span className="text-blue-500" >DATA GOVERNANCE</span>!
+              ¡Bienvenid@ a la sección de <span className="text-blue-500" >DATA GOVERNANCE</span>!
             </h3>
           </div>
         </div>

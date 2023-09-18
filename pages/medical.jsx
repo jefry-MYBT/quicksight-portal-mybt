@@ -41,7 +41,7 @@ export default function Medical({ session }) {
            
             </div>
             <h3 className="font-black dark:bg-[#172554] dark:text-white text-gray-800 md:text-3xl text-lg animate-fade-up mt-[10px]">
-              ¡Bienvenid@ a el área de <span className="text-blue-500" >MEDICAL</span>!
+              ¡Bienvenid@ a la sección <span className="text-blue-500" >MEDICAL</span>!
             </h3>
           </div>
         </div>

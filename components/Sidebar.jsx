@@ -121,7 +121,7 @@ export default function Siderbar(props) {
             </Link>
           ))}
 
-          {/* Condicional para el área de tecnología */}
+          {/* Condicional para la sección de tecnología */}
           {userCondition ? (
             <Link href="/tecnologia">
               <li className="flex mt-2 dark:bg-[#1e293b] dark:hover:bg-[#1e293b] dark:text-white hover:bg-gray-200 bg-gray-100 rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4">

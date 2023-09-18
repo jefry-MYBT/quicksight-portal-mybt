@@ -34,7 +34,7 @@ export default function Cards() {
         <img className="relative w-40 animate-bounce-slow" src="logos/aplicaciones/botys/comercial.png" alt="comercial" />
       </div>
       <div className="relative text-white px-6 pb-6 mt-6">
-        <span className="block opacity-75 -mb-1">Área</span>
+        <span className="block opacity-75 -mb-1">Sección</span>
         <div className="flex justify-between">
           <span className="block font-semibold text-xl">Comercial</span>
           <Link href="/comercial">
@@ -53,7 +53,7 @@ export default function Cards() {
         <img className="relative w-40 animate-bounce-slow" src="logos/aplicaciones/botys/operaciones.png" alt="operaciones" />
       </div>
       <div className="relative text-white px-6 pb-6 mt-6">
-        <span className="block opacity-75 -mb-1">Área</span>
+        <span className="block opacity-75 -mb-1">Sección</span>
         <div className="flex justify-between">
           <span className="block font-semibold text-xl">Operaciones</span>
           <Link href="/operaciones">
@@ -72,7 +72,7 @@ export default function Cards() {
         <img className="relative w-40 animate-bounce-slow" src="logos/aplicaciones/botys/medical.png" alt="medical" />
       </div>
       <div className="relative text-white px-6 pb-6 mt-6">
-        <span className="block opacity-75 -mb-1">Área</span>
+        <span className="block opacity-75 -mb-1">Sección</span>
         <div className="flex justify-between">
           <span className="block font-semibold text-xl">Medical</span>
           <Link href="/medical">
