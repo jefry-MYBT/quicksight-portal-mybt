@@ -33,7 +33,7 @@ export default function Medical({ session }) {
     },
     {
       title: "Grupales",
-      img: "/gif/operaciones/Grupales.gif",
+      img: "/gif/operaciones/grupales.gif",
       description: "Grupales - Quicksight",
       href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/609adf52-7e31-47c1-b5a5-0fa30ca2259a?directory_alias=bodytechteam",
     },
