@@ -140,7 +140,24 @@ export default function Siderbar(props) {
             <div></div>
           )}
         </ul>
-        <h3
+        <ul>
+        <Link href="/glosary">
+              <li className="flex mt-2 dark:bg-[#1e293b] dark:hover:bg-[#1e293b] dark:text-white hover:bg-gray-200 bg-gray-100 rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4">
+              <img
+                className="w-6 h-6"
+                src={`/logos/aplicaciones/iconos/icon_Glosary.png`}
+              />
+                <span
+                  className={`${!open && "hidden"} origin-left duration-200`}
+                >
+                  Data Governance
+                </span>
+              </li>
+            </Link>
+            <div></div>
+        </ul>
+
+       {/*  <h3
           className={` ${
             !open && "hidden"
           } text-gray-500 font-medium mt-10 mb-[-10px]`}
@@ -161,7 +178,7 @@ export default function Siderbar(props) {
               </span>
             </li>
           </Link>
-        </ul>
+        </ul> */}
       </div>
     </div>
   );

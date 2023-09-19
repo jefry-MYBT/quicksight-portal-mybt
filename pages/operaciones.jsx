@@ -31,12 +31,12 @@ export default function Medical({ session }) {
       description: "Novedades - Quicksight",
       href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/b624b4cf-132f-415d-ad72-64bbc3a28297?directory_alias=bodytechteam",
     },
-   /*  {
+    {
       title: "Grupales",
       img: "/gif/operaciones/Grupales.gif",
       description: "Grupales - Quicksight",
       href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/609adf52-7e31-47c1-b5a5-0fa30ca2259a?directory_alias=bodytechteam",
-    }, */
+    },
   ];
   return (
     <div className="flex">
