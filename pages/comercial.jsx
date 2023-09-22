@@ -25,6 +25,12 @@ export default function Medical({ session }) {
       img: "/gif/comercial/crm.gif",
       description: "CRM - Quicksight",
       href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/c1b471f7-6a6e-4243-b44a-24b04af968ce?directory_alias=bodytechteam",
+    },
+    {
+      title: "Ventas Web",
+      img: "/gif/comercial/web.gif",
+      description: "Ventas Web - Quicksight",
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/c073e786-7b3e-4cf5-826d-794f60dadae6?directory_alias=bodytechteam",
     }
   ];
   return (
