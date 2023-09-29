@@ -35,11 +35,11 @@ export default function Header(props) {
       </div> */}
       <Menu as="div">
         <div>
-          <Menu.Button className="flex items-center gap-4 hover:bg-gray-200 dark:hover:bg-[#1e293b] py-2 px-4 rounded-lg transition-colors relative">
+          <Menu.Button className="[&>*:nth-child(3)]:hover:animate-bounce flex items-center gap-4 hover:bg-gray-200 dark:hover:bg-[#1e293b] py-2 px-4 rounded-lg transition-colors relative">
             <img src={props.datos.user.image} className="w-8 h-8 object-cover rounded-full" />
             <span>{props.datos.user.name}</span>
             <svg
-              className="w-8 h-8 hover:animate-bounce"
+              className="w-8 h-8"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
