@@ -37,6 +37,12 @@ export default function Medical({ session }) {
       description: "Grupales - Quicksight",
       href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/609adf52-7e31-47c1-b5a5-0fa30ca2259a?directory_alias=bodytechteam",
     },
+    {
+      title: "Entrenamientos Empleados",
+      img: "/gif/operaciones/entrenamiento_empleados.gif",
+      description: "Entrenamientos Empleados - Quicksight",
+      href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/f5cfc36e-fa86-4539-abdb-3ad4e7b63996?directory_alias=bodytechteam",
+    },
   ];
   return (
     <div className="flex">
