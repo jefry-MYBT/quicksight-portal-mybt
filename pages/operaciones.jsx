@@ -13,12 +13,12 @@ export default function Medical({ session }) {
       description: "Control de Accesos -  Quicksight",
       href: "https://us-east-1.quicksight.aws.amazon.com/sn/dashboards/43de66f7-4db5-4f8d-9676-ad31c8bb13e8",
     },
-    {
+   /*  {
       title: "Almacenamiento",
       img: "/gif/operaciones/novedades.gif",
       description: "Almacenamiento - Quicksight",
       href: "https://us-east-1.quicksight.aws.amazon.com/sn/accounts/111141462942/dashboards/5abbf8af-40d0-4baa-b178-2afe1bf21c1b?directory_alias=bodytechteam",
-    },
+    }, */
     {
       title: "Afiliados - Uso",
       img: "/gif/operaciones/afiliados.gif",
