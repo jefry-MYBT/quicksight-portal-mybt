@@ -58,7 +58,7 @@ export default function Medical({ session }) {
                     <span className="font-bold text-base">Operaciones</span>
                     {open ? (
                       <svg
-                        className="w-6 h-6"
+                        className="w-6 h-6 animate-bounce"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +88,7 @@ export default function Medical({ session }) {
                       </svg>
                     ) : (
                       <svg
-                        className="w-6 h-6"
+                        className="w-6 h-6 animate-bounce"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +129,7 @@ export default function Medical({ session }) {
                             </span>
                             {open ? (
                       <svg
-                        className="w-6 h-6"
+                        className="w-6 h-6 animate-bounce"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -159,7 +159,7 @@ export default function Medical({ session }) {
                       </svg>
                     ) : (
                       <svg
-                        className="w-6 h-6"
+                        className="w-6 h-6 animate-bounce"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
