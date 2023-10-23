@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu } from "@/data/slider";
 
 export default function Siderbar(props) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const menus = Menu;
   const session = props.datos;
   const userCondition =
@@ -25,7 +25,9 @@ export default function Siderbar(props) {
         } bg-white rounded-lg h-[700px] p-5 pt-8 relative duration-300 dark:bg-[#0f172a] `}
       >
         <button
-          className={`animate-bounce bg-white dark:bg-[#0f172a] dark:border-[#0f172a] absolute -right-3 top-9 w-7 rounded-full ${!open && "rotate-[360deg]"}`}
+          className={`animate-bounce bg-white dark:bg-[#0f172a] dark:border-[#0f172a] absolute -right-3 top-9 w-7 rounded-full ${
+            !open && "rotate-[360deg]"
+          }`}
           onClick={() => setOpen(!open)}
         >
           <svg
@@ -94,11 +96,11 @@ export default function Siderbar(props) {
         <h3
           className={` ${
             !open && "hidden"
-          } text-gray-500 font-medium mt-10 mb-[-45px]`}
+          } text-gray-500 font-medium mt-6 mb-[-45px]`}
         >
           Aplicaciones
         </h3>
-        <ul className="pt-14">
+        <ul className="pt-14 group">
           {menus.map((menu, index) => (
             <Link href={menu.href}>
               <li
@@ -108,12 +110,14 @@ export default function Siderbar(props) {
                   index === 0 && "bg-light-white"
                 } `}
               >
+
+
                 <img
                   className="w-6 h-6"
                   src={`/logos/aplicaciones/iconos/${menu.src}.png`}
                 />
                 <span
-                  className={`${!open && "hidden"} origin-left duration-200`}
+                  className={`${!open && "invisible"} origin-left duration-200`}
                 >
                   {menu.title}
                 </span>
@@ -141,44 +145,42 @@ export default function Siderbar(props) {
           )}
         </ul>
         <ul>
-        <Link href="/glosary">
-              <li className="flex mt-2 dark:bg-[#1e293b] dark:hover:bg-[#1e293b] dark:text-white hover:bg-gray-200 bg-gray-100 rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4">
-              <img
-                className="w-6 h-6"
-                src={`/logos/aplicaciones/iconos/icon_Glosary.png`}
-              />
-                <span
-                  className={`${!open && "hidden"} origin-left duration-200`}
-                >
-                  Data Governance
-                </span>
-              </li>
-            </Link>
-            <div></div>
-        </ul>
-
-       {/*  <h3
-          className={` ${
-            !open && "hidden"
-          } text-gray-500 font-medium mt-10 mb-[-10px]`}
-        >
-          Data Governance
-        </h3>
-        <ul className="pt-6">
           <Link href="/glosary">
-            <li
-              className={`flex bg-gray-100 hover:bg-gray-200 rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4`}
-            >
+            <li className="flex mt-2 dark:bg-[#1e293b] dark:hover:bg-[#1e293b] dark:text-white hover:bg-gray-200 bg-gray-100 rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4">
               <img
                 className="w-6 h-6"
                 src={`/logos/aplicaciones/iconos/icon_Glosary.png`}
               />
               <span className={`${!open && "hidden"} origin-left duration-200`}>
-                Data Glosary
+                Data Governance
               </span>
             </li>
           </Link>
-        </ul> */}
+          <div></div>
+        </ul>
+
+        <h3
+          className={` ${
+            !open && "hidden"
+          } text-gray-500 font-medium mt-6 mb-[-10px]`}
+        >
+          Aprendizaje
+        </h3>
+        <ul className="pt-6">
+          <Link href="/media">
+            <li
+              className={`flex bg-gray-100 hover:bg-gray-200 rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4`}
+            >
+              <img
+                className="w-6 h-6"
+                src={`/logos/aplicaciones/iconos/icon_Media.png`}
+              />
+              <span className={`${!open && "hidden"} origin-left duration-200`}>
+                Multimedia
+              </span>
+            </li>
+          </Link>
+        </ul>
       </div>
     </div>
   );
