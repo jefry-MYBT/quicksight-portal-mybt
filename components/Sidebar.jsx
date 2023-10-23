@@ -18,11 +18,11 @@ export default function Siderbar(props) {
     session.user.email === "john.mena@bodytechcorp.com" ||
     session.user.email === "oscar.maldonado@bodytechcorp.com";
   return (
-    <div>
+    <div className="bg-white rounded-lg">
       <div
         className={` ${
           open ? "w-72" : "w-20 "
-        } bg-white rounded-lg h-[700px] p-5 pt-8 relative duration-300 dark:bg-[#0f172a] `}
+        }  p-5 pt-8 relative duration-300 dark:bg-[#0f172a] `}
       >
         <button
           className={`animate-bounce bg-white dark:bg-[#0f172a] dark:border-[#0f172a] absolute -right-3 top-9 w-7 rounded-full ${
