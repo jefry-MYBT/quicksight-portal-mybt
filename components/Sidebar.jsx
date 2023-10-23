@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu } from "@/data/slider";
 
 export default function Siderbar(props) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const menus = Menu;
   const session = props.datos;
   const userCondition =
