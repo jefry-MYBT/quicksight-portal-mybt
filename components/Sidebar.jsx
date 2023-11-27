@@ -6,6 +6,11 @@ export default function Siderbar(props) {
   const [open, setOpen] = useState(true);
   const menus = Menu;
   const session = props.datos;
+
+  /**
+   * @type {Array}
+   */
+
   const userCondition =
     session.user.email === "joan.gomez@bodytechcorp.com" ||
     session.user.email === "johan.farfan@bodytechcorp.com" ||
@@ -74,7 +79,7 @@ export default function Siderbar(props) {
         <h3
           className={` ${
             !open && "hidden"
-          } text-gray-500 font-medium mt-5 mb-[-10px]`}
+          } text-gray-500 font-medium mt-5 mb-[-10px] dark:text-white`}
         >
           Inicio
         </h3>
@@ -96,7 +101,7 @@ export default function Siderbar(props) {
         <h3
           className={` ${
             !open && "hidden"
-          } text-gray-500 font-medium mt-6 mb-[-45px]`}
+          } text-gray-500 font-medium mt-6 mb-[-45px] dark:text-white`}
         >
           Aplicaciones
         </h3>
@@ -134,7 +139,7 @@ export default function Siderbar(props) {
                   src={`/logos/aplicaciones/iconos/icon-Tecnologia.png`}
                 />
                 <span
-                  className={`${!open && "hidden"} origin-left duration-200`}
+                  className={`${!open && "hidden"} origin-left duration-200 dark:text-white`}
                 >
                   Tecnología
                 </span>
@@ -151,7 +156,7 @@ export default function Siderbar(props) {
                 className="w-6 h-6"
                 src={`/logos/aplicaciones/iconos/icon_Glosary.png`}
               />
-              <span className={`${!open && "hidden"} origin-left duration-200`}>
+              <span className={`${!open && "hidden"} origin-left duration-200 dark:text-white`}>
                 Data Governance
               </span>
             </li>
@@ -162,20 +167,20 @@ export default function Siderbar(props) {
         <h3
           className={` ${
             !open && "hidden"
-          } text-gray-500 font-medium mt-6 mb-[-10px]`}
+          } text-gray-500 font-medium mt-6 mb-[-10px] dark:text-white`}
         >
           Aprendizaje
         </h3>
         <ul className="pt-6">
           <Link href="/media">
             <li
-              className={`flex bg-gray-100 hover:bg-gray-200 rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4`}
+              className={`flex bg-gray-100 dark:bg-[#1e293b] dark:hover:bg-[#1e293b] hover:bg-gray-200 rounded-md p-2 cursor-pointer hover:bg-light-white text-black font-semibold text-sm items-center gap-x-4`}
             >
               <img
                 className="w-6 h-6"
                 src={`/logos/aplicaciones/iconos/icon_Media.png`}
               />
-              <span className={`${!open && "hidden"} origin-left duration-200`}>
+              <span className={`${!open && "hidden"} origin-left duration-200 dark:text-white`}>
                 Multimedia
               </span>
             </li>

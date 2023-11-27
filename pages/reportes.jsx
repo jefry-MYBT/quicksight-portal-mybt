@@ -6,7 +6,7 @@ import Siderbar from "@/components/Sidebar";
 import { ReportesAfiliados } from "@/data/afiliados_reportes";
 import Link from "next/link";
 
-export default function Medical({ session }) {
+export default function Reportes({ session }) {
   const afiliados = ReportesAfiliados;
   const [datos, setDatos] = useState(session);
   const contentCard = [
@@ -70,20 +70,20 @@ export default function Medical({ session }) {
                           stroke-linejoin="round"
                         ></g>
                         <g id="SVGRepo_iconCarrier">
-                          {" "}
+                          
                           <path
                             d="M15 13.5L12 10.5L9 13.5"
                             stroke="#1C274C"
                             stroke-width="1.5"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                          ></path>{" "}
+                          ></path>
                           <path
                             d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7"
                             stroke="#1C274C"
                             stroke-width="1.5"
                             stroke-linecap="round"
-                          ></path>{" "}
+                          ></path>
                         </g>
                       </svg>
                     ) : (
@@ -100,20 +100,20 @@ export default function Medical({ session }) {
                           stroke-linejoin="round"
                         ></g>
                         <g id="SVGRepo_iconCarrier">
-                          {" "}
+                          
                           <path
                             d="M15 10.5L12 13.5L9 10.5"
                             stroke="#1C274C"
                             stroke-width="1.5"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                          ></path>{" "}
+                          ></path>
                           <path
                             d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7"
                             stroke="#1C274C"
                             stroke-width="1.5"
                             stroke-linecap="round"
-                          ></path>{" "}
+                          ></path>
                         </g>
                       </svg>
                     )}
@@ -141,20 +141,20 @@ export default function Medical({ session }) {
                           stroke-linejoin="round"
                         ></g>
                         <g id="SVGRepo_iconCarrier">
-                          {" "}
+                          
                           <path
                             d="M15 13.5L12 10.5L9 13.5"
                             stroke="#1C274C"
                             stroke-width="1.5"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                          ></path>{" "}
+                          ></path>
                           <path
                             d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7"
                             stroke="#1C274C"
                             stroke-width="1.5"
                             stroke-linecap="round"
-                          ></path>{" "}
+                          ></path>
                         </g>
                       </svg>
                     ) : (
@@ -171,24 +171,25 @@ export default function Medical({ session }) {
                           stroke-linejoin="round"
                         ></g>
                         <g id="SVGRepo_iconCarrier">
-                          {" "}
+                          
                           <path
                             d="M15 10.5L12 13.5L9 10.5"
                             stroke="#1C274C"
                             stroke-width="1.5"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                          ></path>{" "}
+                          ></path>
                           <path
                             d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7"
                             stroke="#1C274C"
                             stroke-width="1.5"
                             stroke-linecap="round"
-                          ></path>{" "}
+                          ></path>
                         </g>
                       </svg>
                     )}
                           </Disclosure.Button>
+                          {afiliados.map((afiliado, i) => (
                           <Disclosure.Panel className="text-base px-4 pt-4 pb-2 text-gray-500 hover:underline">
                             <svg
                               viewBox="0 0 1024 1024"
@@ -215,12 +216,11 @@ export default function Medical({ session }) {
                                 ></path>
                               </g>
                             </svg>
-                            {afiliados.map((afiliado, i) => (
                               <Link target="_blank" href={afiliado.href}>
                                 {afiliado.title}
                               </Link>
-                            ))}
                           </Disclosure.Panel>
+                          ))}
                         </>
                       )}
                     </Disclosure>

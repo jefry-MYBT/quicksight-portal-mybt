@@ -4,7 +4,7 @@ import Link from "next/link";
 import { getSession } from "next-auth/react";
 import Siderbar from "@/components/Sidebar";
 
-export default function Medical({ session }) {
+export default function Comercial({ session }) {
   const [datos, setDatos] = useState(session);
 
   const contentCard = [
