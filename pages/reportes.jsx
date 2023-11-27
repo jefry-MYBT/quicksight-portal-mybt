@@ -50,7 +50,7 @@ export default function Reportes({ session }) {
         </div>
         {/* seccion del menu acordeon */}
         <div className="w-full pt-5">
-          <div className="mx-auto w-full rounded-2xl bg-white p-2">
+          <div className="mx-auto w-full rounded-2xl bg-white p-2 dark:bg-[#0f172a]">
             <Disclosure>
               {({ open }) => (
                 <>
@@ -217,7 +217,7 @@ export default function Reportes({ session }) {
                               </g>
                             </svg>
                               <Link target="_blank" href={afiliado.href}>
-                                {afiliado.title}
+                                <span className="dark:text-white">{afiliado.title}</span>
                               </Link>
                           </Disclosure.Panel>
                           ))}
