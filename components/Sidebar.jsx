@@ -7,10 +7,6 @@ export default function Siderbar(props) {
   const menus = Menu;
   const session = props.datos;
 
-  /**
-   * @type {Array}
-   */
-
   const userCondition =
     session.user.email === "joan.gomez@bodytechcorp.com" ||
     session.user.email === "johan.farfan@bodytechcorp.com" ||
@@ -23,7 +19,7 @@ export default function Siderbar(props) {
     session.user.email === "john.mena@bodytechcorp.com" ||
     session.user.email === "oscar.maldonado@bodytechcorp.com";
   return (
-    <div className="bg-white rounded-lg">
+    <div className="dark:bg-[#0f172a] rounded-lg">
       <div
         className={` ${
           open ? "w-72" : "w-20 "
