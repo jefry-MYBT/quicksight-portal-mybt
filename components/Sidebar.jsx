@@ -19,7 +19,7 @@ export default function Siderbar(props) {
     session.user.email === "john.mena@bodytechcorp.com" ||
     session.user.email === "oscar.maldonado@bodytechcorp.com";
   return (
-    <div className="dark:bg-[#0f172a] rounded-lg">
+    <div className="dark:bg-[#0f172a] bg-white rounded-lg">
       <div
         className={` ${
           open ? "w-72" : "w-20 "
